@@ -1,0 +1,90 @@
+! Using XLFD (created via e.g. xfontsel)
+
+!URxvt*font:    -misc-fixed-medium-r-semicondensed-*-12-90-100-*-c-60-iso8859-1
+
+! Using Xft
+
+URxvt*font:    xft:Tamzen:size=12
+!URxvt*font: xft:terminus:antialias=false:size=10
+!URxvt*font: -*-terminus-medium-r-*-*-16-*-*-*-*-*-*-*i
+
+!URxvt*font: -*-tamzen-medium-r-*-*-16-*-*-*-*-*-*-*
+
+!URxvt*font: -*-terminus-bold-*-*-*-18-*-*-*-*-*-iso8859-*
+!URxvt*font: -*-terminus-*-*-*-*-14-*-*-*-*-*-*-*
+!URxvt*boldFont: -*-terminus-medium-r-*-*-*-*-*-*-*-*-*-*
+!URxvt.letterSpace: -2
+
+!-*-{ Xft settings
+
+Xft*dpi:       96
+Xft*antialias: True
+!Xft*hinting:   Full
+
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+!-*-}
+! Set the style of the scrollbar: rxvt (default), plain, next, xterm
+URxvt.scrollstyle: rxvt
+! To disable the scrollbar
+
+URxvt.scrollBar: false
+URxvt.internalBorder: 20
+
+!-*- Perl extensions -*-
+
+URxvt.perl-ext-common:default,clipboard,matcher,keyboard-select
+URxvt.keysym.M-u:     perl:url-select:select_next
+URxvt.url-launcher:   /usr/bin/firefox
+URxvt.underlineURLs:  True
+URxvt.matcher.button: 1 
+URxvt.keysym.M-Escape:perl:keyboard-select:activate
+URxvt.keysym.M-c:     perl:clipboard:copy
+URxvt.keysym.M-v:     perl:clipboard:paste
+!URxvt.keysym.M-C-v:   perl:clipboard:paste_escaped
+URxvt.copyCommand:   xsel -ib
+URxvt.pasteCommand:  xsel -ob
+
+! Comment this if you dont want copy when text is selected
+!URxvt.clipboard.autocopy: true
+
+!*background: #121212
+!*background: #2e3436
+!*background: #1C2029
+*depth: 32
+!*background: [97]#1C2029
+!*foreground: #00ACB0
+
+!*foreground: #87A8AF
+
+!URxvt.transparent: true
+!URxvt.shading: 10
+URxvt.foreground:   #f9f7dd
+URxvt.background:   [90]#373737
+URxvt.fading: 10
+!URxvt.fadeColor: [0]black
+
+#include ".urxvt_colors_rainbow"
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+!rofi.color-enabled: true
+!rofi.color-window: #242726, #242726, #aaff77
+!rofi.color-normal: #242726, #c1c1c1, #242726, #394249, #ffffff
+!rofi.color-active: #242726, #aaff77, #242726, #394249, #aaff77
+!rofi.color-urgent: #242726, #ff1844, #242726, #394249, #ff1844
+!rofi.separator-style: solid
+!rofi.sidebar-mode: true
+!rofi.lines: 5
+!rofi.font: Monospace 12
+!rofi.bw: 1
+!rofi.columns: 1
+!rofi.padding: 5
+!rofi.fixed-num-lines: true
+!rofi.hide-scrollbar: true
